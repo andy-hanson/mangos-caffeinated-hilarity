@@ -1,6 +1,7 @@
 # Mango's Caffeinated Hilarity
 
-Excellent combo-based boincing ball game.
+Excellent combo-based bouncing ball game.
+
 
 ## Running
 
@@ -10,15 +11,21 @@ Install Java, then: `./run.sh`
 ## Controls
 
 Arrow keys: Move
-X: Attack
+
 Z: Double/Triple jump
+
+X: Attack
+
 P: Pause
-Q: Go back to beginning of current level
+
+Q: Go back to the beginning of the current level.
 
 On the title screen, Enter to begin or press a number to play that level in challenge mode.
 
+
 ## Playing
 
+Climb up to the top to win!
 Hit lots of platforms and enemies to build up your combo.
 Hitting the same platform twice destroys your combo.
 
