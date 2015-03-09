@@ -30,9 +30,14 @@ class FPSControl {
 			lastTime = thisTime;
 
 			//Adjust waitTime, then wait.
-			if (timeLatestFrameTook <= 1000000000/main.FPS) waitTime++;
-			else { waitTime--; if (waitTime < 0) waitTime = 0; }
-			main.wait(waitTime);
+			if (timeLatestFrameTook <= 1000000000/main.FPS)
+				waitTime++;
+			else {
+				waitTime--;
+				if (waitTime < 0)
+					waitTime = 0;
+			}
+			main.sleep(waitTime);
 			//System.out.println(timeLatestFrameTook + "	" + waitTime);
 		}
 	}

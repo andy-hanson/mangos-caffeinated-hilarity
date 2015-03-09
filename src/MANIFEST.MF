@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Permissions: all-permissions
+Codebase: localhost:8080
+Application-Name: Mango

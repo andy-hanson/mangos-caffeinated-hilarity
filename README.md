@@ -3,12 +3,18 @@
 Excellent combo-based bouncing ball game.
 
 
-## Running
+## Run
 
-Install Java, then: `./run.sh`
+Many ways:
+
+* Go to <http://andy-hanson.github.io/mango>.
+* `./build-html.sh; cd html; python -m SimpleHTTPServer`, then go to <http://localhost:8000>.
+* `./run.sh`
 
 
 ## Controls
+
+On the title screen, press Enter to begin or press a number to play that level in challenge mode.
 
 Arrow keys: Move
 
@@ -18,9 +24,7 @@ X: Attack
 
 P: Pause
 
-Q: Go back to the beginning of the current level.
-
-On the title screen, Enter to begin or press a number to play that level in challenge mode.
+Q: Give up and restart the level
 
 
 ## Playing
@@ -30,7 +34,7 @@ Hit lots of platforms and enemies to build up your combo.
 Hitting the same platform twice destroys your combo.
 
 
-### License
+## License
 
 DO WHATEVER THE FUCK YOU WANT, PUBLIC LICENSE
 TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION

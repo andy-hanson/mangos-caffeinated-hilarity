@@ -137,15 +137,6 @@ public class Main extends Applet implements Runnable {
 		}
 	}
 
-	public void wait(int millis) {
-		try {
-			myThread.sleep(millis);
-		}
-		catch (InterruptedException e) {
-			System.out.println("InterruptedException in Main.wait");
-		}
-	}
-
 	private void loadLevel() {
 		backgrounder.reset();
 		specialGraphics.getNewLevel();
@@ -217,7 +208,7 @@ public class Main extends Applet implements Runnable {
 
 	public void start() {
 		if (myThread == null) {
-			myThread = new Thread (this);
+			myThread = new Thread(this);
 			myThread.start();
 		}
 	}
@@ -232,13 +223,13 @@ public class Main extends Applet implements Runnable {
 		}
 	}
 
+	volatile boolean stopped;
 	public void stop() {
-		myThread = null;
+		stopped = true;
 	}
 
 	public void run() {
-		myThread.setPriority(Thread.MIN_PRIORITY);
-		while(true) {
+		while (!stopped) {
 			myFPSControl.update();
 			if (onStartScreen)
 				startScreenAct();
@@ -483,7 +474,7 @@ public class Main extends Applet implements Runnable {
 		//When the player dies, pause for 2 seconds, then restart the level.
 		helper.playSound("died");
 		specialMessage = "Try Again!";
-		wait(2000);
+		sleep(2000);
 		justDied = true;
 	}
 }
